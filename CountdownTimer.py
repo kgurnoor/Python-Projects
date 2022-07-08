@@ -1,4 +1,3 @@
-
 # Import Module
 import time
 from tkinter import *
@@ -9,13 +8,12 @@ root = Tk()
 # root window title and dimension
 root.title("Countdown Timer")
 # Set geometry (widthxheight)
-root.geometry('350x200')
+root.geometry('300x200')
 root.configure(bg='black')
 
 #adding a label to the root window
 lbl = Label(root, text = "PYTHON COUNTDOWN TIMER")
 lbl.grid(row=1,column=4)
-
 
 #timer function
 # Declaration of variables
@@ -31,15 +29,15 @@ second.set("00")
 # Use of Entry class to take input from the user
 hourEntry= Entry(root, width=3, font=("Arial",18,""),
                  textvariable=hour)
-hourEntry.place(x=80,y=20)
+hourEntry.place(x=80,y=60)
 
 minuteEntry= Entry(root, width=3, font=("Arial",18,""),
                    textvariable=minute)
-minuteEntry.place(x=130,y=20)
+minuteEntry.place(x=130,y=60)
 
 secondEntry= Entry(root, width=3, font=("Arial",18,""),
                    textvariable=second)
-secondEntry.place(x=180,y=20)
+secondEntry.place(x=180,y=60)
 
 
 def submit():
@@ -79,18 +77,14 @@ def submit():
         # with a message:"Time's up"
         if (temp == 0):
             messagebox.showinfo("Time Countdown", "Time's up ")
-
-
         # after every one sec the value of temp will be decremented
         # by one
-
-
         temp -= 1
 
 # button widget
 btn = Button(root, text='Set Time Countdown', bd='5',
              command= submit)
-btn.place(x = 70,y = 120)
+btn.place(x = 80,y = 120)
 
 #sound
 import winsound
